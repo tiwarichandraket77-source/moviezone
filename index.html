@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Ticket Booking</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fas fa-film"></i> MovieZone
+    </div>
+
+    <nav>
+        <a href="#movies">Movies</a>
+        <a href="#booking">Booking</a>
+        <a href="#cinemas">Cinemas</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Book Your Favourite Movie</h1>
+    <p>Select movie, date, showtime and seats</p>
+</section>
+
+<section id="movies" class="movies">
+
+<h2>Now Showing</h2>
+
+<div class="movie-container">
+
+<div class="movie-card"
+onclick="selectMovie(this,'Avengers Endgame',250)">
+
+<img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600">
+
+<h3>Avengers Endgame</h3>
+
+<p class="price">₹250 / Seat</p>
+
+<button>Select Movie</button>
+
+</div>
+
+
+<div class="movie-card"
+onclick="selectMovie(this,'Interstellar',300)">
+
+<img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600">
+
+<h3>Interstellar</h3>
+
+<p class="price">₹300 / Seat</p>
+
+<button>Select Movie</button>
+
+</div>
+
+
+<div class="movie-card"
+onclick="selectMovie(this,'John Wick 4',280)">
+
+<img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600">
+
+<h3>John Wick 4</h3>
+
+<p class="price">₹280 / Seat</p>
+
+<button>Select Movie</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="booking" class="booking">
+
+<h2>Book Tickets</h2>
+
+<div id="selectedMovie">
+Selected Movie: None
+</div>
+
+<label>Select Date</label>
+
+<input type="date" id="datePicker">
+
+<label>Select Show Time</label>
+
+<select id="showTime">
+
+<option value="">Choose Show</option>
+
+<option>10:00 AM</option>
+
+<option>01:00 PM</option>
+
+<option>04:00 PM</option>
+
+<option>07:00 PM</option>
+
+<option>10:00 PM</option>
+
+</select>
+
+<label>Select Cinema</label>
+
+<select id="cinema">
+
+<option>Navin Cinema Hajipur</option>
+
+<option>DD Cinema Hajipur</option>
+
+<option>Ganesh Cinema Hajipur</option>
+
+</select>
+
+<h3>Choose Seats</h3>
+
+<div id="seatContainer" class="seat-container">
+
+<div class="seat">A1</div>
+<div class="seat">A2</div>
+<div class="seat">A3</div>
+<div class="seat">A4</div>
+<div class="seat">A5</div>
+<div class="seat">A6</div>
+<div class="seat">A7</div>
+<div class="seat">A8</div>
+
+<div class="seat">B1</div>
+<div class="seat">B2</div>
+<div class="seat">B3</div>
+<div class="seat">B4</div>
+<div class="seat">B5</div>
+<div class="seat">B6</div>
+<div class="seat">B7</div>
+<div class="seat">B8</div>
+
+<div class="seat">C1</div>
+<div class="seat">C2</div>
+<div class="seat">C3</div>
+<div class="seat">C4</div>
+<div class="seat">C5</div>
+<div class="seat">C6</div>
+<div class="seat">C7</div>
+<div class="seat">C8</div>
+
+<div class="seat">D1</div>
+<div class="seat">D2</div>
+<div class="seat">D3</div>
+<div class="seat">D4</div>
+<div class="seat">D5</div>
+<div class="seat">D6</div>
+<div class="seat">D7</div>
+<div class="seat">D8</div>
+
+</div>
+
+<div class="summary">
+
+<p>Seats Selected:
+<span id="seatCount">0</span></p>
+
+<p>Total Price:
+₹<span id="totalPrice">0</span></p>
+
+</div>
+
+<button id="bookBtn">
+Confirm Booking
+</button>
+
+</section>
+
+
+<section id="cinemas" class="cinemas">
+
+<h2>Cinema Locations</h2>
+
+<div class="cinema-links">
+
+<a target="_blank"
+href="https://maps.google.com/?q=Navin+Cinema+Hajipur">
+📍 Navin Cinema
+</a>
+
+<a target="_blank"
+href="https://maps.google.com/?q=DD+Cinema+Hajipur">
+📍 DD Cinema
+</a>
+
+<a target="_blank"
+href="https://maps.google.com/?q=Ganesh+Cinema+Hajipur">
+📍 Ganesh Cinema
+</a>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

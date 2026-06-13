@@ -1,0 +1,296 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff4757;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:18px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff4757;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.7),
+rgba(0,0,0,.8)
+),
+
+url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+/* MOVIES */
+
+.movies{
+padding:80px 8%;
+}
+
+.movies h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+}
+
+.movie-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.movie-card{
+background:#161b22;
+border-radius:15px;
+overflow:hidden;
+cursor:pointer;
+transition:.4s;
+}
+
+.movie-card:hover{
+transform:translateY(-10px);
+}
+
+.movie-card img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.movie-card h3{
+padding:15px;
+font-size:24px;
+}
+
+.price{
+padding-left:15px;
+padding-bottom:15px;
+font-size:20px;
+font-weight:bold;
+color:#2ed573;
+}
+
+.movie-card button{
+margin:15px;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+background:#ff4757;
+color:white;
+cursor:pointer;
+}
+
+/* SELECTED MOVIE */
+
+.movie-card.selected{
+border:4px solid #2ed573;
+box-shadow:0 0 25px rgba(46,213,115,.8);
+transform:scale(1.02);
+}
+
+#selectedMovie{
+margin-bottom:25px;
+font-size:24px;
+font-weight:bold;
+color:#2ed573;
+}
+
+/* BOOKING */
+
+.booking{
+padding:80px 8%;
+background:#111827;
+}
+
+.booking h2{
+text-align:center;
+margin-bottom:40px;
+font-size:40px;
+}
+
+.booking label{
+display:block;
+margin-top:20px;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.booking input,
+.booking select{
+width:100%;
+padding:15px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+/* SEATS */
+
+.seat-container{
+display:grid;
+grid-template-columns:repeat(8,1fr);
+gap:12px;
+margin-top:30px;
+}
+
+.seat{
+background:#444;
+height:50px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:8px;
+cursor:pointer;
+
+transition:.3s;
+font-weight:bold;
+}
+
+.seat:hover{
+transform:scale(1.05);
+}
+
+.seat.selected{
+background:#2ed573;
+color:black;
+}
+
+.summary{
+margin-top:30px;
+background:#161b22;
+padding:20px;
+border-radius:10px;
+}
+
+.summary p{
+font-size:22px;
+margin-bottom:10px;
+}
+
+#bookBtn{
+margin-top:25px;
+padding:15px 40px;
+border:none;
+background:#ff4757;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* CINEMAS */
+
+.cinemas{
+padding:80px 8%;
+text-align:center;
+}
+
+.cinemas h2{
+margin-bottom:40px;
+font-size:40px;
+}
+
+.cinema-links{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.cinema-links a{
+background:#161b22;
+padding:20px 30px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+.cinema-links a:hover{
+background:#ff4757;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:35px;
+}
+
+.seat-container{
+grid-template-columns:repeat(4,1fr);
+}
+
+.movie-container{
+grid-template-columns:1fr;
+}
+
+}
